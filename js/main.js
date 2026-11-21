@@ -12,9 +12,7 @@
     info: $('#info'), count: $('#count'), title: $('#title'), color: $('#color'), price: $('#price'), detailsBtn: $('#detailsBtn'),
     sizes: $('#sizes'), addBtn: $('#addBtn'), wheel: $('#wheel'), wheelWrap: $('#wheelWrap'), wheelEnd: $('#wheelEnd'), live: $('#live'),
     bagBtn: $('#bagBtn'), bagCount: $('#bagCount'), drawer: $('#drawer'), scrim: $('#scrim'), drawerClose: $('#drawerClose'),
-    cartList: $('#cartList'), cartEmpty: $('#cartEmpty'), toCheckout: $('#toCheckout'), viewCart: $('#viewCart'), viewForm: $('#viewForm'),
-    backToCart: $('#backToCart'), fName: $('#fName'), fMail: $('#fMail'), errName: $('#errName'), errMail: $('#errMail'),
-    summary: $('#summary'), sentNote: $('#sentNote'), sentLink: $('#sentLink'),
+    cartList: $('#cartList'), cartEmpty: $('#cartEmpty'), toCheckout: $('#toCheckout'),
     sheet: $('#sheet'), sheetClose: $('#sheetClose'), sheetImg: $('#sheetImg'), sheetBrand: $('#sheetBrand'), sheetTitle: $('#sheetTitle'),
     sheetColor: $('#sheetColor'), sheetPrice: $('#sheetPrice'), sheetSizes: $('#sheetSizes'), sheetAdd: $('#sheetAdd'),
     viewSide: $('#viewSide'), viewFront: $('#viewFront'),
@@ -307,7 +305,7 @@
       rm.addEventListener('click', () => { cart.splice(idx, 1); saveCart(); paintCart(); });
       li.append(img, mid, rm); el.cartList.appendChild(li);
     });
-    el.cartEmpty.hidden = cart.length > 0; el.toCheckout.disabled = cart.length === 0;
+    el.cartEmpty.hidden = cart.length > 0; el.toCheckout.hidden = cart.length === 0;
   }
   function addToCart(id, size) {
     const hit = cart.find((c) => c.id === id && c.size === size);
@@ -331,9 +329,8 @@
 
   /* ---------- drawer ---------- */
   let drawerOpener = null;
-  function showView(v) { el.viewCart.hidden = v !== 'cart'; el.viewForm.hidden = v !== 'form'; }
   function openDrawer() {
-    drawerOpener = document.activeElement; showView('cart'); paintCart();
+    drawerOpener = document.activeElement; paintCart();
     el.drawer.removeAttribute('inert'); el.drawer.setAttribute('aria-hidden', 'false');
     el.scrim.hidden = false; requestAnimationFrame(() => { el.drawer.classList.add('is-open'); el.scrim.classList.add('is-on'); });
     setTimeout(() => el.drawerClose.focus(), 60);
@@ -347,43 +344,7 @@
   el.bagBtn.addEventListener('click', openDrawer);
   el.drawerClose.addEventListener('click', closeDrawer);
   el.scrim.addEventListener('click', closeDrawer);
-  el.toCheckout.addEventListener('click', () => {
-    if (!cart.length) return;
-    el.sentNote.hidden = true; el.errName.hidden = true; el.errMail.hidden = true;
-    el.fName.removeAttribute('aria-invalid'); el.fMail.removeAttribute('aria-invalid');
-    el.summary.innerHTML = '';
-    const ul = document.createElement('ul');
-    cart.forEach((c) => { const pr = P.find((x) => x.id === c.id); const li = document.createElement('li'); li.textContent = `${c.qty}× ${pr.name}${c.size ? ', tamanho ' + c.size : ''}`; ul.appendChild(li); });
-    el.summary.appendChild(ul); showView('form'); setTimeout(() => el.fName.focus(), 40);
-  });
-  el.backToCart.addEventListener('click', () => showView('cart'));
 
-  function buildMessage(name, mail) {
-    const lines = cart.map((c) => { const pr = P.find((x) => x.id === c.id); return `• ${c.qty}× ${pr.name}${c.size ? ', tamanho ' + c.size : ''}`; });
-    return ['Olá, Relojoaria LauMY! Gostaria de encomendar:', '', ...lines, '', `Nome: ${name}`, ...(mail ? [`Email: ${mail}`] : []), '', 'Encomenda feita pelo site.'].join('\n');
-  }
-  el.fName.addEventListener('input', () => { if (el.fName.value.trim().length >= 2) { el.errName.hidden = true; el.fName.removeAttribute('aria-invalid'); } });
-  el.fMail.addEventListener('input', () => { const m = el.fMail.value.trim(); if (!m || /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(m)) { el.errMail.hidden = true; el.fMail.removeAttribute('aria-invalid'); } });
-  el.viewForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const name = el.fName.value.trim().replace(/\s+/g, ' '), mail = el.fMail.value.trim();
-    const nameOk = name.length >= 2, mailOk = !mail || /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(mail);
-    el.errName.hidden = nameOk; el.errMail.hidden = mailOk;
-    nameOk ? el.fName.removeAttribute('aria-invalid') : el.fName.setAttribute('aria-invalid', 'true');
-    mailOk ? el.fMail.removeAttribute('aria-invalid') : el.fMail.setAttribute('aria-invalid', 'true');
-    if (!nameOk) { el.fName.focus(); return; }
-    if (!mailOk) { el.fMail.focus(); return; }
-    if (!cart.length) return;
-    const msg = buildMessage(name, mail);
-    const url = CONTACT;
-    el.sentLink.href = url; el.sentNote.hidden = false;
-    if (true) {
-      /* no telefone number yet: put the order on the clipboard, then open the shop's Instagram chat so it can be pasted */
-      try { navigator.clipboard.writeText(msg); } catch (_) {}
-      $('#sentText').textContent = 'Ligue para a loja para confirmar o pedido. Se não abriu,';
-    }
-    const w = window.open(url, '_blank', 'noopener'); if (!w) window.location.href = url;
-  });
 
   /* ---------- search ---------- */
   function paintSearch(q) {

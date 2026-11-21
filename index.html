@@ -228,11 +228,11 @@
   </section>
 
   <section class="how" id="como-encomendar" aria-labelledby="howTitle">
-    <h2 id="howTitle">Como encomendar.</h2>
+    <h2 id="howTitle">Como consultar.</h2>
     <ol>
       <li><span>01</span><div><h3>Escolha o produto</h3><p>Rode a coleção com o dedo, a roda ou as setas do teclado.</p></div></li>
-      <li><span>02</span><div><h3>Junte ao carrinho</h3><p>Pode levar mais do que um produto no mesmo pedido.</p></div></li>
-      <li><span>03</span><div><h3>Envie o pedido</h3><p>Diga-nos o seu nome e abrimos a conversa com o <span data-channel>Instagram</span>, com o pedido já escrito.</p></div></li>
+      <li><span>02</span><div><h3>Consulte o preço</h3><p>O preço de cada peça é sob consulta.</p></div></li>
+      <li><span>03</span><div><h3>Ligue para a loja</h3><p>Para consultar preços e disponibilidade, ligue para +244 934 157 570.</p></div></li>
     </ol>
   </section>
 
@@ -257,7 +257,7 @@
         <h2 id="followTitle">Acompanhe a Relojoaria LauMY.</h2>
         <p>Veja as novidades no Instagram <span id="igHandleFollow">@relojoaria_laumy</span>.</p>
       </div>
-      <a class="pill pill-line" id="igFollow" href="tel:+244934157570" target="_blank" rel="noopener">Seguir no Instagram</a>
+      <a class="pill pill-line" id="igFollow" href="https://www.instagram.com/relojoaria_laumy" target="_blank" rel="noopener">Seguir no Instagram</a>
     </div>
     </div>
   </section>
@@ -286,7 +286,7 @@
   </section>
 
   <section class="info-extra" id="informacoes" aria-labelledby="infoExtraTitle">
-    <div class="extra-grid"><div><p class="kicker">Informações</p><h2 id="infoExtraTitle">Perguntas e condições.</h2></div><div class="faq-list" id="faqList"><details><summary>Como consulto o preço?</summary><p>Cada produto apresenta “Preço sob consulta”. Ligue para +244 934 157 570.</p></details><details><summary>Onde posso visitar a loja?</summary><p>A Relojoaria LauMY está em Lubango e Namibe (Moçâmedes). Ligue para confirmar informações da loja.</p></details><details><summary>Como obter informações de entrega?</summary><p>Ligue para +244 934 157 570 para consultar as condições de entrega.</p></details></div></div>
+    <div class="extra-grid"><div><p class="kicker">Informações</p><h2 id="infoExtraTitle">Perguntas e condições.</h2></div><div class="faq-list" id="faqList"><details><summary>Como consulto o preço?</summary><p>Cada produto apresenta “Preço sob consulta”. Ligue para +244 934 157 570.</p></details><details><summary>Onde posso visitar a loja?</summary><p>A Relojoaria LauMY está em Lubango e Namibe (Moçâmedes). Ligue para confirmar as informações da loja.</p></details><details><summary>Como obter informações de entrega?</summary><p>NOT SET. Ligue para +244 934 157 570 para obter informações.</p></details></div></div>
     <div class="legal-links"><a href="legal/privacidade.html">Privacidade</a><a href="legal/termos.html">Termos</a><a href="tel:+244934157570">Ligar para a loja</a></div>
   </section>
 </main>
@@ -322,23 +322,12 @@
     <ul class="cart-list" id="cartList"></ul>
     <p class="cart-empty" id="cartEmpty">O carrinho está vazio. Escolha um produto.</p>
     <footer class="drawer-foot">
-      <p class="note">O preço e a disponibilidade são confirmados na conversa com a loja.</p>
-      <button class="btn-dark btn-wa" id="toCheckout" type="button" disabled><svg class="wa-ico" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><use href="#i-ig"/></svg><span>Encomendar por <span data-channel>Instagram</span></span></button>
+      <p class="note">Para consultar o preço e a disponibilidade, ligue para +244 934 157 570.</p>
+      <a class="btn-dark btn-wa" id="toCheckout" href="tel:+244934157570" hidden>Ligar para consultar</a>
     </footer>
   </div>
 
-  <form class="drawer-view" id="viewForm" hidden novalidate>
-    <button class="back" id="backToCart" type="button">
-      <svg viewBox="0 0 16 10" width="14" height="9" aria-hidden="true"><path d="M15 5H2M6 1 2 5l4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      Voltar ao carrinho
-    </button>
-    <p class="form-lead">Só precisamos de saber quem é. Abrimos a conversa com o <span data-channel>Instagram</span>, com a encomenda já escrita.</p>
-    <label class="field"><span>Nome</span><input id="fName" name="nome" type="text" autocomplete="name" required maxlength="80"><em class="err" id="errName" hidden>Escreva o seu nome.</em></label>
-    <label class="field"><span>Email <small>(opcional)</small></span><input id="fMail" name="email" type="email" autocomplete="email" maxlength="120" placeholder="nome@gmail.com"><em class="err" id="errMail" hidden>Este email não parece correto.</em></label>
-    <div class="summary" id="summary"></div>
-    <button class="btn-dark btn-wa" id="sendWa" type="submit"><svg class="wa-ico" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><use href="#i-ig"/></svg><span>Enviar pelo <span data-channel>Instagram</span></span></button>
-    <p class="sent" id="sentNote" hidden><span id="sentText">Abrimos a conversa. Se não abriu,</span> <a id="sentLink" href="tel:+244934157570" target="_blank" rel="noopener">toque aqui</a>.</p>
-  </form>
+
 </aside>
 
 <dialog class="sheet" id="sheet" aria-labelledby="sheetTitle">
@@ -358,7 +347,7 @@
       <p class="sheet-price" id="sheetPrice"></p>
       <div class="sizes sizes-sheet" id="sheetSizes" role="radiogroup" aria-label="Tamanho" hidden></div>
       <button class="add" id="sheetAdd" type="button">Adicionar ao carrinho</button>
-      <p class="note">Disponibilidade e preço confirmados pela loja.</p>
+      <p class="note">Para consultar a disponibilidade e o preço, ligue para +244 934 157 570.</p>
     </div>
   </div>
 </dialog>

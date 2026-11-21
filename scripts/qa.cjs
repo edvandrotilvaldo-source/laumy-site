@@ -17,7 +17,7 @@ const MIME = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css
     server = http.createServer((q, r) => { const f = path.join(root, decodeURIComponent(q.url.split('?')[0]).replace(/\/$/, '/index.html')); if (!f.startsWith(root) || !fs.existsSync(f) || fs.statSync(f).isDirectory()) { r.writeHead(404); return r.end(); } r.writeHead(200, { 'content-type': MIME[path.extname(f)] || 'application/octet-stream' }); fs.createReadStream(f).pipe(r); });
     await new Promise((res) => server.listen(0, res)); base = `http://localhost:${server.address().port}/`;
   }
-  const b = await chromium.launch(); const errs = [];
+  const b = await chromium.launch(process.env.CHROMIUM_PATH ? { executablePath: process.env.CHROMIUM_PATH } : {}); const errs = [];
   for (const [n, vw, vh, mob] of [['d', 1440, 900, false], ['m', 390, 844, true]]) {
     const ctx = await b.newContext({ viewport: { width: vw, height: vh }, hasTouch: mob, isMobile: mob }); const pg = await ctx.newPage();
     pg.on('pageerror', (e) => { if (!/requireLazy/.test(e.message)) errs.push(`${n} pageerror ${e.message}`); });
@@ -35,22 +35,18 @@ const MIME = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css
     await pg.evaluate(() => document.querySelector('#colecao').scrollIntoView()); await pg.waitForTimeout(1500);
     await pg.screenshot({ path: path.join(OUT, `${n}-2-orbit.png`) });
     for (const g of [...K.groups].reverse()) { await pg.locator('.tab', { hasText: new RegExp('^' + g.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '$') }).click(); await pg.waitForTimeout(1500); log((await idx()) === `${pad(firstOf(g))} / ${pad(N)}`, `${n} tab "${g}" -> ${await idx()}`); }
-    const wb = await pg.locator('#wheel').boundingBox(); await pg.mouse.move(wb.x + wb.width / 2, wb.y + 10); await pg.mouse.down(); await pg.mouse.move(wb.x + wb.width / 2 - 150, wb.y + 10, { steps: 8 }); await pg.mouse.up(); await pg.waitForTimeout(1500);
-    log((await idx()) !== `${pad(firstOf(K.groups[0]))} / ${pad(N)}` || N < 3 || mob, `${n} dragging the wheel moves the orbit (${await idx()})`);
-    await pg.keyboard.press('ArrowLeft'); await pg.waitForTimeout(900);
-    // cart + order
+    await pg.locator('#wheel').focus(); await pg.keyboard.press('ArrowRight'); await pg.waitForTimeout(1000);
+    log((await idx()) === `02 / ${pad(N)}`, `${n} keyboard control on the wheel advances the orbit (${await idx()})`);
+    await pg.keyboard.press('ArrowRight'); await pg.waitForTimeout(900);
+    // cart + the single permitted contact channel
     const needSize = (K.sizes || []).length > 0;
     if (needSize) await pg.locator('#sizes .size').first().click();
     await pg.locator('#addBtn').click(); await pg.waitForTimeout(500);
     log((await pg.textContent('#bagCount')) === '1', `${n} add to cart, badge = 1`);
     await pg.locator('#toastOpen').click({ force: true }); await pg.waitForTimeout(700); await pg.screenshot({ path: path.join(OUT, `${n}-3-cart.png`) });
-    await pg.locator('#toCheckout').click({ force: true }); await pg.waitForTimeout(300); await pg.locator('#sendWa').click({ force: true }); await pg.waitForTimeout(200);
-    log(await pg.locator('#errName').isVisible() && (await pg.evaluate(() => window.__open.length)) === 0, `${n} an empty name is refused and nothing opens`);
-    await pg.fill('#fName', 'Maria Teste'); await pg.fill('#fMail', 'maria@gmail.com'); await pg.locator('#sendWa').click({ force: true }); await pg.waitForTimeout(400);
-    const op = await pg.evaluate(() => window.__open), clip = await pg.evaluate(() => window.__clip);
-    if (K.whatsapp) log(op.length === 1 && op[0].startsWith(`https://wa.me/${K.whatsapp}?text=`) && decodeURIComponent(op[0]).includes('Maria Teste'), `${n} the order opens the phone link with the text already written`);
-    else log(op.length === 1 && op[0] === 'tel:+244934157570', `${n} no online order number: the order opens the store phone link`);
-    await pg.screenshot({ path: path.join(OUT, `${n}-4-order.png`) }); await pg.keyboard.press('Escape'); await pg.waitForTimeout(500);
+    log((await pg.locator('#toCheckout').getAttribute('href')) === 'tel:+244934157570' && await pg.locator('#toCheckout').isVisible(), `${n} cart presents only the store call link`);
+    log((await pg.locator('#viewForm').count()) === 0, `${n} no message-order or customer-data form`);
+    await pg.screenshot({ path: path.join(OUT, `${n}-4-call.png`) }); await pg.keyboard.press('Escape'); await pg.waitForTimeout(500);
     // catalogue
     await pg.evaluate(() => document.querySelector('#catalogo').scrollIntoView()); await pg.waitForTimeout(400);
     log((await pg.locator('.cat-card').count()) === N && (await pg.locator('.cat-group').count()) === K.groups.length, `${n} collection grid: ${N} cards in ${K.groups.length} groups`);
