@@ -1,0 +1,708 @@
+{
+  "id": "laumy",
+  "name": "Relojoaria LauMY",
+  "lang": "pt-AO",
+  "tagline": "Relógios e joias em Angola",
+  "whatsapp": "",
+  "whatsappDisplay": "",
+  "phone": "+244 934 157 570",
+  "phoneDisplay": "+244 934 157 570",
+  "instagram": "https://www.instagram.com/relojoaria_laumy",
+  "instagramHandle": "@relojoaria_laumy",
+  "priceLabel": "Preço sob consulta",
+  "sizes": [],
+  "groups": [
+    "Relógios",
+    "Anéis",
+    "Colares",
+    "Pulseiras"
+  ],
+  "products": [
+    {
+      "id": "watch-01",
+      "slug": "watch-01",
+      "file": "img/products/watch-01.webp",
+      "group": "Relógios",
+      "name": "Relógio 01",
+      "color": "NOT SET",
+      "single": true,
+      "shadow": "baked",
+      "width": 463,
+      "height": 803
+    },
+    {
+      "id": "watch-02",
+      "slug": "watch-02",
+      "file": "img/products/watch-02.webp",
+      "group": "Relógios",
+      "name": "Relógio 02",
+      "color": "NOT SET",
+      "single": true,
+      "shadow": "baked",
+      "width": 468,
+      "height": 758
+    },
+    {
+      "id": "watch-03",
+      "slug": "watch-03",
+      "file": "img/products/watch-03.webp",
+      "group": "Relógios",
+      "name": "Relógio 03",
+      "color": "NOT SET",
+      "single": true,
+      "shadow": "baked",
+      "width": 700,
+      "height": 1200
+    },
+    {
+      "id": "watch-04",
+      "slug": "watch-04",
+      "file": "img/products/watch-04.webp",
+      "group": "Relógios",
+      "name": "Relógio 04",
+      "color": "NOT SET",
+      "single": true,
+      "shadow": "baked",
+      "width": 600,
+      "height": 1025
+    },
+    {
+      "id": "watch-05",
+      "slug": "watch-05",
+      "file": "img/products/watch-05.webp",
+      "group": "Relógios",
+      "name": "Relógio 05",
+      "color": "NOT SET",
+      "single": true,
+      "shadow": "baked",
+      "width": 719,
+      "height": 1200
+    },
+    {
+      "id": "watch-06",
+      "slug": "watch-06",
+      "file": "img/products/watch-06.webp",
+      "group": "Relógios",
+      "name": "Relógio 06",
+      "color": "NOT SET",
+      "single": true,
+      "shadow": "baked",
+      "width": 576,
+      "height": 844
+    },
+    {
+      "id": "watch-07",
+      "slug": "watch-07",
+      "file": "img/products/watch-07.webp",
+      "group": "Relógios",
+      "name": "Relógio 07",
+      "color": "NOT SET",
+      "single": true,
+      "shadow": "baked",
+      "width": 868,
+      "height": 1200
+    },
+    {
+      "id": "watch-08",
+      "slug": "watch-08",
+      "file": "img/products/watch-08.webp",
+      "group": "Relógios",
+      "name": "Relógio 08",
+      "color": "NOT SET",
+      "single": true,
+      "shadow": "baked",
+      "width": 652,
+      "height": 993
+    },
+    {
+      "id": "watch-09",
+      "slug": "watch-09",
+      "file": "img/products/watch-09.webp",
+      "group": "Relógios",
+      "name": "Relógio 09",
+      "color": "NOT SET",
+      "single": true,
+      "shadow": "baked",
+      "width": 900,
+      "height": 1053
+    },
+    {
+      "id": "watch-10",
+      "slug": "watch-10",
+      "file": "img/products/watch-10.webp",
+      "group": "Relógios",
+      "name": "Relógio 10",
+      "color": "NOT SET",
+      "single": true,
+      "shadow": "baked",
+      "width": 628,
+      "height": 1000
+    },
+    {
+      "id": "watch-11",
+      "slug": "watch-11",
+      "file": "img/products/watch-11.webp",
+      "group": "Relógios",
+      "name": "Relógio 11",
+      "color": "NOT SET",
+      "single": true,
+      "shadow": "baked",
+      "width": 350,
+      "height": 592
+    },
+    {
+      "id": "watch-12",
+      "slug": "watch-12",
+      "file": "img/products/watch-12.webp",
+      "group": "Relógios",
+      "name": "Relógio 12",
+      "color": "NOT SET",
+      "single": true,
+      "shadow": "baked",
+      "width": 834,
+      "height": 1179
+    },
+    {
+      "id": "watch-13",
+      "slug": "watch-13",
+      "file": "img/products/watch-13.webp",
+      "group": "Relógios",
+      "name": "Relógio 13",
+      "color": "NOT SET",
+      "single": true,
+      "shadow": "baked",
+      "width": 649,
+      "height": 1200
+    },
+    {
+      "id": "watch-14",
+      "slug": "watch-14",
+      "file": "img/products/watch-14.webp",
+      "group": "Relógios",
+      "name": "Relógio 14",
+      "color": "NOT SET",
+      "single": true,
+      "shadow": "baked",
+      "width": 686,
+      "height": 1200
+    },
+    {
+      "id": "watch-15",
+      "slug": "watch-15",
+      "file": "img/products/watch-15.webp",
+      "group": "Relógios",
+      "name": "Relógio 15",
+      "color": "NOT SET",
+      "single": true,
+      "shadow": "baked",
+      "width": 753,
+      "height": 1200
+    },
+    {
+      "id": "watch-16",
+      "slug": "watch-16",
+      "file": "img/products/watch-16.webp",
+      "group": "Relógios",
+      "name": "Relógio 16",
+      "color": "NOT SET",
+      "single": true,
+      "shadow": "baked",
+      "width": 476,
+      "height": 783
+    },
+    {
+      "id": "watch-17",
+      "slug": "watch-17",
+      "file": "img/products/watch-17.webp",
+      "group": "Relógios",
+      "name": "Relógio 17",
+      "color": "NOT SET",
+      "single": true,
+      "shadow": "baked",
+      "width": 417,
+      "height": 781
+    },
+    {
+      "id": "watch-18",
+      "slug": "watch-18",
+      "file": "img/products/watch-18.webp",
+      "group": "Relógios",
+      "name": "Relógio 18",
+      "color": "NOT SET",
+      "single": true,
+      "shadow": "baked",
+      "width": 466,
+      "height": 748
+    },
+    {
+      "id": "watch-19",
+      "slug": "watch-19",
+      "file": "img/products/watch-19.webp",
+      "group": "Relógios",
+      "name": "Relógio 19",
+      "color": "NOT SET",
+      "single": true,
+      "shadow": "baked",
+      "width": 415,
+      "height": 782
+    },
+    {
+      "id": "watch-20",
+      "slug": "watch-20",
+      "file": "img/products/watch-20.webp",
+      "group": "Relógios",
+      "name": "Relógio 20",
+      "color": "NOT SET",
+      "single": true,
+      "shadow": "baked",
+      "width": 411,
+      "height": 773
+    },
+    {
+      "id": "ring-01",
+      "slug": "ring-01",
+      "file": "img/products/ring-01.webp",
+      "group": "Anéis",
+      "name": "Anel 01",
+      "color": "NOT SET",
+      "single": true,
+      "shadow": "baked",
+      "width": 867,
+      "height": 698
+    },
+    {
+      "id": "ring-02",
+      "slug": "ring-02",
+      "file": "img/products/ring-02.webp",
+      "group": "Anéis",
+      "name": "Anel 02",
+      "color": "NOT SET",
+      "single": true,
+      "shadow": "baked",
+      "width": 617,
+      "height": 804
+    },
+    {
+      "id": "ring-03",
+      "slug": "ring-03",
+      "file": "img/products/ring-03.webp",
+      "group": "Anéis",
+      "name": "Anel 03",
+      "color": "NOT SET",
+      "single": true,
+      "shadow": "baked",
+      "width": 410,
+      "height": 544
+    },
+    {
+      "id": "ring-04",
+      "slug": "ring-04",
+      "file": "img/products/ring-04.webp",
+      "group": "Anéis",
+      "name": "Anel 04",
+      "color": "NOT SET",
+      "single": true,
+      "shadow": "baked",
+      "width": 267,
+      "height": 345
+    },
+    {
+      "id": "ring-05",
+      "slug": "ring-05",
+      "file": "img/products/ring-05.webp",
+      "group": "Anéis",
+      "name": "Anel 05",
+      "color": "NOT SET",
+      "single": true,
+      "shadow": "baked",
+      "width": 631,
+      "height": 566
+    },
+    {
+      "id": "ring-06",
+      "slug": "ring-06",
+      "file": "img/products/ring-06.webp",
+      "group": "Anéis",
+      "name": "Anel 06",
+      "color": "NOT SET",
+      "single": true,
+      "shadow": "baked",
+      "width": 620,
+      "height": 432
+    },
+    {
+      "id": "ring-07",
+      "slug": "ring-07",
+      "file": "img/products/ring-07.webp",
+      "group": "Anéis",
+      "name": "Anel 07",
+      "color": "NOT SET",
+      "single": true,
+      "shadow": "baked",
+      "width": 676,
+      "height": 867
+    },
+    {
+      "id": "ring-08",
+      "slug": "ring-08",
+      "file": "img/products/ring-08.webp",
+      "group": "Anéis",
+      "name": "Anel 08",
+      "color": "NOT SET",
+      "single": true,
+      "shadow": "baked",
+      "width": 900,
+      "height": 895
+    },
+    {
+      "id": "ring-09",
+      "slug": "ring-09",
+      "file": "img/products/ring-09.webp",
+      "group": "Anéis",
+      "name": "Anel 09",
+      "color": "NOT SET",
+      "single": true,
+      "shadow": "baked",
+      "width": 700,
+      "height": 512
+    },
+    {
+      "id": "ring-10",
+      "slug": "ring-10",
+      "file": "img/products/ring-10.webp",
+      "group": "Anéis",
+      "name": "Anel 10",
+      "color": "NOT SET",
+      "single": true,
+      "shadow": "baked",
+      "width": 427,
+      "height": 561
+    },
+    {
+      "id": "ring-11",
+      "slug": "ring-11",
+      "file": "img/products/ring-11.webp",
+      "group": "Anéis",
+      "name": "Anel 11",
+      "color": "NOT SET",
+      "single": true,
+      "shadow": "baked",
+      "width": 783,
+      "height": 930
+    },
+    {
+      "id": "necklace-01",
+      "slug": "necklace-01",
+      "file": "img/products/necklace-01.webp",
+      "group": "Colares",
+      "name": "Colar 01",
+      "color": "NOT SET",
+      "single": true,
+      "shadow": "baked",
+      "width": 900,
+      "height": 656
+    },
+    {
+      "id": "necklace-02",
+      "slug": "necklace-02",
+      "file": "img/products/necklace-02.webp",
+      "group": "Colares",
+      "name": "Colar 02",
+      "color": "NOT SET",
+      "single": true,
+      "shadow": "baked",
+      "width": 722,
+      "height": 932
+    },
+    {
+      "id": "necklace-03",
+      "slug": "necklace-03",
+      "file": "img/products/necklace-03.webp",
+      "group": "Colares",
+      "name": "Colar 03",
+      "color": "NOT SET",
+      "single": true,
+      "shadow": "baked",
+      "width": 900,
+      "height": 901
+    },
+    {
+      "id": "necklace-04",
+      "slug": "necklace-04",
+      "file": "img/products/necklace-04.webp",
+      "group": "Colares",
+      "name": "Colar 04",
+      "color": "NOT SET",
+      "single": true,
+      "shadow": "baked",
+      "width": 900,
+      "height": 721
+    },
+    {
+      "id": "bracelet-01",
+      "slug": "bracelet-01",
+      "file": "img/products/bracelet-01.webp",
+      "group": "Pulseiras",
+      "name": "Pulseira 01",
+      "color": "NOT SET",
+      "single": true,
+      "shadow": "baked",
+      "width": 604,
+      "height": 598
+    },
+    {
+      "id": "bracelet-02",
+      "slug": "bracelet-02",
+      "file": "img/products/bracelet-02.webp",
+      "group": "Pulseiras",
+      "name": "Pulseira 02",
+      "color": "NOT SET",
+      "single": true,
+      "shadow": "baked",
+      "width": 900,
+      "height": 891
+    }
+  ],
+  "store": {
+    "legalName": "Relojoaria LauMY",
+    "address": "Lubango e Namibe (Moçâmedes), Angola",
+    "addressNote": "Duas lojas: Lubango no plus code 3FMW+46P, R. 2 de Março; Namibe (Moçâmedes), endereço não definido.",
+    "mapsUrl": "",
+    "timezone": "Africa/Luanda",
+    "locations": [
+      {
+        "name": "Lubango",
+        "address": "3FMW+46P, R. 2 de Março",
+        "hours": {
+          "mon": [
+            "08:00",
+            "19:30"
+          ],
+          "tue": [
+            "08:00",
+            "19:30"
+          ],
+          "wed": [
+            "08:00",
+            "19:30"
+          ],
+          "thu": [
+            "08:00",
+            "19:30"
+          ],
+          "fri": [
+            "08:00",
+            "19:30"
+          ],
+          "sat": [
+            "08:00",
+            "18:00"
+          ],
+          "sun": null
+        },
+        "payments": "Cartões de crédito e débito.",
+        "delivery": "NOT SET"
+      },
+      {
+        "name": "Namibe (Moçâmedes)",
+        "address": "NOT SET",
+        "hours": {
+          "mon": [
+            "08:00",
+            "17:30"
+          ],
+          "tue": [
+            "08:00",
+            "17:30"
+          ],
+          "wed": [
+            "08:00",
+            "17:30"
+          ],
+          "thu": [
+            "08:00",
+            "17:30"
+          ],
+          "fri": [
+            "08:00",
+            "17:30"
+          ],
+          "sat": [
+            "08:00",
+            "13:30"
+          ],
+          "sun": null
+        },
+        "payments": "Cartões de crédito.",
+        "delivery": "NOT SET"
+      }
+    ],
+    "hours": {
+      "mon": [
+        "08:00",
+        "19:30"
+      ],
+      "tue": [
+        "08:00",
+        "19:30"
+      ],
+      "wed": [
+        "08:00",
+        "19:30"
+      ],
+      "thu": [
+        "08:00",
+        "19:30"
+      ],
+      "fri": [
+        "08:00",
+        "19:30"
+      ],
+      "sat": [
+        "08:00",
+        "18:00"
+      ],
+      "sun": null
+    },
+    "payments": "Cartões de crédito e débito em Lubango; cartões de crédito em Namibe.",
+    "delivery": "NOT SET"
+  },
+  "reels": [],
+  "posts": [],
+  "site": {
+    "title": "Relojoaria LauMY | Relógios e joias em Angola",
+    "description": "Conheça a coleção de relógios, anéis, colares e pulseiras da Relojoaria LauMY em Lubango e Namibe. Preço sob consulta.",
+    "h1": "Relojoaria LauMY: relógios e joias em Lubango e Namibe",
+    "searchHint": "Nome ou categoria",
+    "hero": {
+      "kicker": "Lubango e Namibe",
+      "titleLines": [
+        "Tempo e detalhe.",
+        "Na sua escolha."
+      ],
+      "sub": "Explore relógios, anéis, colares e pulseiras. Cada peça apresenta o preço sob consulta.",
+      "ctaPrimary": "Ver a coleção",
+      "ctaSecondary": "Ligar para a loja",
+      "art": [
+        "watch-01",
+        "ring-01",
+        "necklace-01"
+      ]
+    },
+    "intro": {
+      "kicker": "A coleção",
+      "title": "Escolha a sua peça.",
+      "sub": "Percorra as categorias e veja cada peça com calma."
+    },
+    "services": {
+      "title": "Explore por categoria.",
+      "sub": "Relógios, anéis, colares e pulseiras."
+    },
+    "chapters": [
+      {
+        "id": "relogios",
+        "group": "Relógios",
+        "kicker": "Relógios",
+        "head": [
+          "Para cada momento.",
+          "No seu pulso."
+        ],
+        "body": "Veja a seleção de relógios da Relojoaria LauMY.",
+        "strong": "Preço sob consulta.",
+        "linkText": "Ver os relógios",
+        "product": "watch-01"
+      },
+      {
+        "id": "aneis",
+        "group": "Anéis",
+        "kicker": "Anéis",
+        "head": [
+          "Um detalhe.",
+          "A sua escolha."
+        ],
+        "body": "Explore os anéis apresentados na coleção.",
+        "strong": "Preço sob consulta.",
+        "linkText": "Ver os anéis",
+        "product": "ring-01"
+      },
+      {
+        "id": "colares",
+        "group": "Colares",
+        "kicker": "Colares",
+        "head": [
+          "Linhas que",
+          "acompanham."
+        ],
+        "body": "Conheça os colares disponíveis na coleção apresentada.",
+        "strong": "Preço sob consulta.",
+        "linkText": "Ver os colares",
+        "product": "necklace-01"
+      },
+      {
+        "id": "pulseiras",
+        "group": "Pulseiras",
+        "kicker": "Pulseiras",
+        "head": [
+          "Um toque",
+          "no seu estilo."
+        ],
+        "body": "Veja as pulseiras apresentadas pela Relojoaria LauMY.",
+        "strong": "Preço sob consulta.",
+        "linkText": "Ver as pulseiras",
+        "product": "bracelet-01"
+      }
+    ],
+    "about": {
+      "title": "Relojoaria LauMY.",
+      "lead": "Uma coleção de relógios e joias apresentada para clientes em Lubango e Namibe.",
+      "facts": [
+        [
+          "Lojas",
+          "Lubango e Namibe (Moçâmedes)"
+        ],
+        [
+          "Contacto",
+          "+244 934 157 570"
+        ],
+        [
+          "Instagram",
+          "@relojoaria_laumy"
+        ],
+        [
+          "Preços",
+          "Preço sob consulta"
+        ]
+      ]
+    },
+    "follow": {
+      "title": "Acompanhe a Relojoaria LauMY.",
+      "sub": "Veja as novidades no Instagram"
+    },
+    "footNote": "Website demonstrativo criado pela Click Start para a Relojoaria LauMY. Produtos, disponibilidade e preços: Preço sob consulta.",
+    "theme": {
+      "accent": "#0071e3",
+      "accentHover": "#0077ed",
+      "accentDeep": "#0066cc"
+    },
+    "locations": "Duas lojas em Angola: Lubango e Namibe (Moçâmedes).",
+    "faq": [
+      {
+        "q": "Como consulto o preço?",
+        "a": "Cada produto apresenta “Preço sob consulta”. Ligue para +244 934 157 570."
+      },
+      {
+        "q": "Onde posso visitar a loja?",
+        "a": "A Relojoaria LauMY está em Lubango e Namibe (Moçâmedes). Ligue para confirmar informações da loja."
+      },
+      {
+        "q": "Como obter informações de entrega?",
+        "a": "Ligue para +244 934 157 570 para consultar as condições de entrega."
+      }
+    ],
+    "legal": {
+      "privacy": "NOT SET.",
+      "terms": "NOT SET."
+    }
+  },
+  "siteUrl": ""
+}

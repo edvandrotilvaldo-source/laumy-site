@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="{{lang}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{title}}</title>
+<meta name="description" content="{{description}}">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" type="image/png" href="img/brand/favicon.png">
+<link rel="icon" href="img/brand/site-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_AO">
+<meta property="og:title" content="{{title}}">
+<meta property="og:description" content="{{description}}">
+<meta property="og:url" content="{{siteUrl}}/">
+<meta property="og:image" content="{{siteUrl}}/img/og-share.png?v=1">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="img/products/{{heroC}}.webp" as="image">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/theme.css">
+</head>
+<body>
+<svg class="sr-only" width="0" height="0" aria-hidden="true" focusable="false">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></symbol>
+</svg>
+<a class="skip" href="#colecao">Saltar para a coleção</a>
+
+<header class="nav" id="nav">
+  <a class="nav-logo" href="#inicio" aria-label="{{name}}, início">
+    <span class="temporary-wordmark" aria-label="TEMPORARY LOGO">Relojoaria LauMY</span>
+    <span>{{name}}</span>
+  </a>
+  <nav class="tabs" id="tabs" aria-label="Serviços"></nav>
+  <div class="nav-actions">
+    <button class="pill-search" id="searchBtn" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="searchPanel">
+      <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="m16 16 4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <span>Pesquisar</span>
+    </button>
+    <a class="icon-btn" id="phoneTop" href="tel:+244934157570" aria-label="Ligar para a loja">Ligar</a>
+    <button class="icon-btn" id="bagBtn" type="button" aria-haspopup="dialog" aria-label="Abrir o carrinho">
+      <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><path d="M5.5 8h13l-1 11.5h-11Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 10V7a3 3 0 0 1 6 0v3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <span class="badge" id="bagCount" hidden>0</span>
+    </button>
+  </div>
+</header>
+
+<div class="search-panel" id="searchPanel" role="dialog" aria-label="Pesquisar produtos" hidden>
+  <input id="searchInput" type="search" placeholder="{{searchHint}}" autocomplete="off" aria-label="Pesquisar produtos">
+  <ul id="searchList"></ul>
+</div>
+
+<main>
+  <h1 class="sr-only">{{h1}}</h1>
+
+  <section class="hero" id="inicio" aria-label="{{name}}">
+    <div class="hero-text">
+      <p class="kicker">{{heroKicker}}</p>
+      <p class="hero-title" aria-hidden="true">{{heroTitleHtml}}</p>
+      <p class="hero-sub">{{heroSub}}</p>
+      <div class="hero-cta">
+        <a class="pill pill-blue" href="#colecao">{{ctaPrimary}}</a>
+        <a class="link-blue" id="heroChat" href="tel:+244934157570">{{ctaSecondary}} <span aria-hidden="true">›</span></a>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <img class="ha ha-l" src="img/products/{{heroL}}.webp" alt="" width="1200" height="960" decoding="async">
+      <img class="ha ha-c" src="img/products/{{heroC}}.webp" alt="" width="1200" height="960" fetchpriority="high">
+      <img class="ha ha-r" src="img/products/{{heroR}}.webp" alt="" width="1200" height="960" decoding="async">
+    </div>
+  </section>
+
+  <div class="stage-intro" id="explorar">
+    <p class="kicker">{{introKicker}}</p>
+    <h2 class="intro-title">{{introTitle}}</h2>
+    <p class="intro-sub">{{introSub}}</p>
+  </div>
+
+  <section class="stage" id="colecao" aria-label="Coleção">
+    <div class="orbit" id="orbit"></div>
+
+    <div class="info" id="info">
+      <p class="count" id="count" aria-hidden="true">01 / 01</p>
+      <h2 class="title" id="title">{{name}}</h2>
+      <p class="color" id="color"></p>
+      <p class="price" id="price">Preço sob consulta</p>
+      <div class="info-links">
+        <button class="details" id="detailsBtn" type="button">
+          <span>Ver detalhes</span>
+          <svg viewBox="0 0 16 10" width="14" height="9" aria-hidden="true"><path d="M1 5h13M10 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <a class="details all-link-m" href="#catalogo"><span>Toda a coleção</span><svg viewBox="0 0 10 16" width="9" height="14" aria-hidden="true"><path d="M5 1v13M1 10l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+
+    <div class="buy" id="buy">
+      <div class="sizes" id="sizes" role="radiogroup" aria-label="Tamanho" hidden></div>
+      <button class="add" id="addBtn" type="button">Adicionar ao carrinho</button>
+    </div>
+
+    <div class="wheel-wrap" id="wheelWrap">
+      <span class="wheel-dot" aria-hidden="true"></span>
+      <div class="wheel" id="wheel" role="slider" tabindex="0" aria-label="Roda para mudar de produto" aria-valuemin="1" aria-valuemax="1" aria-valuenow="1" aria-valuetext="Produto 1 de 1">
+        <div class="wheel-ticks"></div>
+      </div>
+      <div class="wheel-cap" aria-hidden="true"><span>01</span><span>Arraste a roda</span><span id="wheelEnd">01</span></div>
+    </div>
+    <div class="stage-foot">
+      <p class="status" id="status" hidden><span class="dot" aria-hidden="true"></span><span id="statusText"></span></p>
+      <a class="all-link" href="#catalogo"><span>Ver toda a coleção</span><svg viewBox="0 0 10 16" width="9" height="14" aria-hidden="true"><path d="M5 1v13M1 10l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+    <p class="sr-only" id="live" aria-live="polite"></p>
+  </section>
+
+  <!--NOSCRIPT:START-->
+  <noscript></noscript>
+  <!--NOSCRIPT:END-->
+
+  <section class="highlights" id="servicos" aria-labelledby="hlTitle">
+    <div class="hl-head">
+      <h2 id="hlTitle">{{servicesTitle}}</h2>
+      <p>{{servicesSub}}</p>
+    </div>
+    <div class="hl-track" id="hlTrack" tabindex="-1"></div>
+    <div class="hl-ctrl">
+      <div class="hl-pill"><div class="hl-dots" id="hlDots"></div></div>
+      <button class="hl-btn" id="hlPrev" type="button" aria-label="Serviço anterior"><svg viewBox="0 0 10 16" width="9" height="14" aria-hidden="true"><path d="M8 1 2 8l6 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <button class="hl-btn" id="hlNext" type="button" aria-label="Serviço seguinte"><svg viewBox="0 0 10 16" width="9" height="14" aria-hidden="true"><path d="m2 1 6 7-6 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    </div>
+  </section>
+
+  <!--CHAPTERS-->
+
+  <section class="catalog" id="catalogo" aria-labelledby="catTitle">
+    <div class="sec-head">
+      <h2 id="catTitle">Toda a coleção.</h2>
+      <p>Toque num produto para ver os detalhes.</p>
+    </div>
+    <div id="catGroups"></div>
+  </section>
+
+  <section class="how" id="como-encomendar" aria-labelledby="howTitle">
+    <h2 id="howTitle">Como encomendar.</h2>
+    <ol>
+      <li><span>01</span><div><h3>Escolha o produto</h3><p>Rode a coleção com o dedo, a roda ou as setas do teclado.</p></div></li>
+      <li><span>02</span><div><h3>Junte ao carrinho</h3><p>Pode levar mais do que um produto no mesmo pedido.</p></div></li>
+      <li><span>03</span><div><h3>Envie o pedido</h3><p>Diga-nos o seu nome e abrimos a conversa com o <span data-channel>Instagram</span>, com o pedido já escrito.</p></div></li>
+    </ol>
+  </section>
+
+  <section class="about" id="a-loja" aria-labelledby="aboutTitle">
+    <div class="about-grid">
+      <h2 id="aboutTitle">{{aboutTitle}}</h2>
+      <div class="about-text">
+        <p class="lead">{{aboutLead}}</p>
+        <ul class="facts">
+{{aboutFacts}}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="follow" id="acompanhe" aria-labelledby="followTitle">
+    <div class="sec-head sec-head-row">
+      <div>
+        <h2 id="followTitle">{{followTitle}}</h2>
+        <p>{{followSub}} <span id="igHandleFollow">{{igHandle}}</span>.</p>
+      </div>
+      <a class="pill pill-line" id="igFollow" href="tel:+244934157570" target="_blank" rel="noopener">Seguir no Instagram</a>
+    </div>
+    </div>
+  </section>
+
+  <section class="visit" id="visite-nos" aria-labelledby="visitTitle">
+    <div class="visit-grid">
+      <div class="visit-main">
+        <h2 id="visitTitle">Visite-nos.</h2>
+        <div class="visit-locations" id="visitLocations">{{locationsHtml}}</div><p class="visit-addr" id="visitAddr"></p>
+        <p class="visit-note" id="visitNote"></p>
+        <p class="visit-links"><a class="pill pill-line" id="phoneVisit" href="tel:+244934157570">Ligar para a loja</a></p>
+        <article class="campaign" id="campaign" hidden>
+          <p class="campaign-tag" id="campaignTitle"></p>
+          <p id="campaignText"></p>
+        </article>
+      </div>
+      <div class="visit-side">
+        <p class="status status-big" id="status2" hidden><span class="dot" aria-hidden="true"></span><span id="statusText2"></span></p>
+        <ul class="hours" id="hours"></ul>
+        <dl class="visit-facts">
+          <div><dt>Na loja</dt><dd id="visitPay"></dd></div>
+          <div><dt>Encomendas</dt><dd id="visitDelivery"></dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="info-extra" id="informacoes" aria-labelledby="infoExtraTitle">
+    <div class="extra-grid"><div><p class="kicker">Informações</p><h2 id="infoExtraTitle">Perguntas e condições.</h2></div><div class="faq-list" id="faqList">{{faqHtml}}</div></div>
+    <div class="legal-links"><a href="legal/privacidade.html">Privacidade</a><a href="legal/termos.html">Termos</a><a href="tel:+244934157570">Ligar para a loja</a></div>
+  </section>
+</main>
+
+<footer class="foot" id="contacto">
+  <div class="foot-grid">
+    <div>
+      <p class="foot-title">Fale connosco</p>
+      <p><a id="phoneFoot" class="foot-wa" href="tel:+244934157570"><span>Ligar +244 934 157 570</span></a></p>
+      <p><a id="igFoot" href="https://www.instagram.com/relojoaria_laumy" target="_blank" rel="noopener">Instagram <span id="igFootHandle">{{igHandle}}</span></a></p>
+    </div>
+    <div>
+      <p class="foot-title">Onde estamos</p>
+      <p id="footAddr">{{address}}</p>
+    </div>
+  </div>
+  <p class="foot-note">{{footNote}}</p>
+  <a class="credit" data-credit href="https://clickstartangola.com" target="_blank" rel="noopener" aria-label="Feito por Click Start">
+    <span>Feito por</span>
+    <img src="img/brand/click-start-credit.svg" alt="Click Start" width="144" height="28" loading="lazy">
+  </a>
+</footer>
+
+<div class="scrim" id="scrim" hidden></div>
+
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" aria-hidden="true" inert>
+  <header class="drawer-head">
+    <h2 id="drawerTitle">Carrinho</h2>
+    <button class="close" id="drawerClose" type="button" aria-label="Fechar o carrinho"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+  </header>
+
+  <div class="drawer-view" id="viewCart">
+    <ul class="cart-list" id="cartList"></ul>
+    <p class="cart-empty" id="cartEmpty">O carrinho está vazio. Escolha um produto.</p>
+    <footer class="drawer-foot">
+      <p class="note">O preço e a disponibilidade são confirmados na conversa com a loja.</p>
+      <button class="btn-dark btn-wa" id="toCheckout" type="button" disabled><svg class="wa-ico" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><use href="#i-ig"/></svg><span>Encomendar por <span data-channel>Instagram</span></span></button>
+    </footer>
+  </div>
+
+  <form class="drawer-view" id="viewForm" hidden novalidate>
+    <button class="back" id="backToCart" type="button">
+      <svg viewBox="0 0 16 10" width="14" height="9" aria-hidden="true"><path d="M15 5H2M6 1 2 5l4 4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Voltar ao carrinho
+    </button>
+    <p class="form-lead">Só precisamos de saber quem é. Abrimos a conversa com o <span data-channel>Instagram</span>, com a encomenda já escrita.</p>
+    <label class="field"><span>Nome</span><input id="fName" name="nome" type="text" autocomplete="name" required maxlength="80"><em class="err" id="errName" hidden>Escreva o seu nome.</em></label>
+    <label class="field"><span>Email <small>(opcional)</small></span><input id="fMail" name="email" type="email" autocomplete="email" maxlength="120" placeholder="nome@gmail.com"><em class="err" id="errMail" hidden>Este email não parece correto.</em></label>
+    <div class="summary" id="summary"></div>
+    <button class="btn-dark btn-wa" id="sendWa" type="submit"><svg class="wa-ico" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><use href="#i-ig"/></svg><span>Enviar pelo <span data-channel>Instagram</span></span></button>
+    <p class="sent" id="sentNote" hidden><span id="sentText">Abrimos a conversa. Se não abriu,</span> <a id="sentLink" href="tel:+244934157570" target="_blank" rel="noopener">toque aqui</a>.</p>
+  </form>
+</aside>
+
+<dialog class="sheet" id="sheet" aria-labelledby="sheetTitle">
+  <button class="close" id="sheetClose" type="button" aria-label="Fechar"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+  <div class="sheet-grid">
+    <div class="sheet-media">
+      <div class="sheet-img"><img id="sheetImg" alt="" width="1200" height="960"></div>
+      <div class="sheet-views" role="tablist" aria-label="Vista" hidden>
+        <button type="button" role="tab" id="viewSide" aria-selected="true">De lado</button>
+        <button type="button" role="tab" id="viewFront" aria-selected="false">De frente</button>
+      </div>
+    </div>
+    <div class="sheet-body">
+      <p class="sheet-brand" id="sheetBrand"></p>
+      <h2 id="sheetTitle"></h2>
+      <p class="sheet-color" id="sheetColor"></p>
+      <p class="sheet-price" id="sheetPrice"></p>
+      <div class="sizes sizes-sheet" id="sheetSizes" role="radiogroup" aria-label="Tamanho" hidden></div>
+      <button class="add" id="sheetAdd" type="button">Adicionar ao carrinho</button>
+      <p class="note">Disponibilidade e preço confirmados pela loja.</p>
+    </div>
+  </div>
+</dialog>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden>
+  <span id="toastText">Adicionado ao carrinho</span>
+  <button type="button" id="toastOpen">Ver carrinho</button>
+</div>
+
+<script src="data/products.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
